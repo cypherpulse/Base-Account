@@ -24,11 +24,6 @@
       ]
     }
   ],
-  "functions": {
-    "src/pages/api/*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
   "devCommand": "pnpm dev",

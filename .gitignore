@@ -280,3 +280,10 @@ jest-coverage/
 # Local configuration
 config.local.*
 *.local.*
+
+# Scripts
+scripts
+.scripts/
+scripts
+.ps1
+.ps
