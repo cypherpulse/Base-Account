@@ -6,6 +6,7 @@
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6?style=for-the-badge&logo=typescript)
 ![Vite](https://img.shields.io/badge/Vite-4.4.0-646CFF?style=for-the-badge&logo=vite)
+![Viem](https://img.shields.io/badge/Viem-2.41.2-000000?style=for-the-badge&logo=ethereum)
 
 **A comprehensive demo application showcasing Base Account integration with React**
 
@@ -57,6 +58,7 @@
 - **TypeScript**: Full type safety throughout the application
 - **Hot Reload**: Fast development with Vite
 - **ESLint**: Code quality and consistency
+- **Viem Integration**: Ethereum account management and cryptographic operations
 - **Modular Architecture**: Clean, maintainable code structure
 
 ---
@@ -173,6 +175,27 @@ const sdk = createBaseAccountSDK({
   },
 });
 ```
+
+### Viem Integration
+
+Viem (`^2.41.2`) is used for Ethereum account management and cryptographic operations:
+
+```typescript
+import { privateKeyToAccount } from 'viem/accounts';
+
+// Create demo owner account for sub-account signing
+const ownerAccount = privateKeyToAccount(process.env.DEMO_PRIVATE_KEY || 'your-private-key-here');
+
+// Account properties available:
+console.log(ownerAccount.address);    // '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
+console.log(ownerAccount.publicKey);  // Public key for signing operations
+```
+
+Viem provides:
+- **Account Management**: Local account creation and management
+- **Cryptographic Operations**: Secure signing and verification
+- **Type Safety**: Full TypeScript support for Ethereum operations
+- **Performance**: Optimized for modern Ethereum interactions
 
 ---
 
@@ -412,6 +435,30 @@ USDC payment button component.
 
 #### `BaseLogo`
 Base logo component with customizable sizing.
+
+### Viem Library
+
+Viem (`^2.41.2`) is a TypeScript interface for Ethereum that provides low-level utilities for interacting with Ethereum.
+
+#### `privateKeyToAccount(privateKey)`
+
+Creates a local account from a private key.
+
+**Parameters:**
+- `privateKey` (string): Private key in hex format (with or without 0x prefix)
+
+**Returns:** LocalAccount object with address, publicKey, and signing methods
+
+```typescript
+const account = privateKeyToAccount('your-private-key-here');
+console.log(account.address); // '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
+```
+
+#### Key Features Used:
+- **Account Creation**: Generate and manage Ethereum accounts
+- **Cryptographic Operations**: Secure signing for sub-account transactions
+- **Type Safety**: Full TypeScript support for all operations
+- **Performance**: Optimized for modern Ethereum applications
 
 ---
 
