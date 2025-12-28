@@ -1,5 +1,6 @@
 import { CheckCircle2, Clock, XCircle, Loader2, ExternalLink } from "lucide-react";
 
+// Props interface for payment status display component
 interface PaymentStatusProps {
   status: string;
   paymentId?: string;
