@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
+// 404 error page component for handling non-existent routes
 const NotFound = () => {
   const location = useLocation();
 
