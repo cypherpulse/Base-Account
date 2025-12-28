@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
 
+// Props interface for the amount selector component
 interface AmountSelectorProps {
   value: string;
   onChange: (value: string) => void;
