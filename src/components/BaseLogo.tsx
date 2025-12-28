@@ -1,3 +1,4 @@
+// Base logo component with customizable sizing and white background
 const BaseLogo = ({ className = "w-8 h-8" }: { className?: string }) => {
   return (
     <div className={`${className} bg-white flex items-center justify-center rounded`}>
