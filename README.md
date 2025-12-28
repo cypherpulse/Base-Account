@@ -2,13 +2,10 @@
 
 <div align="center">
 
-![Base Account Demo](https://img.shields.io/badge/Base-Account-blue?style=for-the-badge&logo=ethereum)
-![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6?style=for-the-badge&logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-4.4.0-646CFF?style=for-the-badge&logo=vite)
-![Viem](https://img.shields.io/badge/Viem-2.41.2-000000?style=for-the-badge&logo=ethereum)
+Base Account Demo
+React 18.2.0 • TypeScript 5.0.0 • Vite 4.4.0 • Viem 2.41.2
 
-**A comprehensive demo application showcasing Base Account integration with React**
+A comprehensive demo application showcasing Base Account integration with React
 
 [Live Demo](https://your-demo-url.com) • [Documentation](https://docs.base.org) • [Report Bug](https://github.com/your-repo/issues) • [Request Feature](https://github.com/your-repo/issues)
 
@@ -16,54 +13,54 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [✨ Features](#-features)
-- [🚀 Quick Start](#-quick-start)
-- [📦 Installation](#-installation)
-- [⚙️ Configuration](#️-configuration)
-- [🎯 Usage](#-usage)
-- [🛠️ Development](#️-development)
-- [🧪 Testing](#-testing)
-- [🚀 Deployment](#-deployment)
-- [📚 API Reference](#-api-reference)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [🙋 Support](#-support)
-
----
-
-## ✨ Features
-
-### 🔐 Account Management
-- **Sign In with Base**: Seamless authentication using Base Account
-- **Account Creation**: Create new Base Accounts with sub-account support
-- **Network Switching**: Toggle between Base Sepolia Testnet and Base Mainnet
-- **Secure Wallet Integration**: EIP-1193 compliant provider integration
-
-### 💰 Payment Processing
-- **USDC Payments**: Send USDC payments on Base network
-- **Real-time Status**: Live payment status tracking
-- **Gasless Transactions**: Paymaster integration for sponsored transactions
-- **Multi-network Support**: Testnet and Mainnet payment processing
-
-### 🎨 User Experience
-- **Modern UI**: Built with shadcn/ui and Tailwind CSS
-- **Responsive Design**: Mobile-first approach with adaptive layouts
-- **Dark Theme**: Consistent dark theme matching Base branding
-- **Loading States**: Comprehensive loading and error handling
-- **Toast Notifications**: User-friendly feedback system
-
-### 🛠️ Developer Experience
-- **TypeScript**: Full type safety throughout the application
-- **Hot Reload**: Fast development with Vite
-- **ESLint**: Code quality and consistency
-- **Viem Integration**: Ethereum account management and cryptographic operations
-- **Modular Architecture**: Clean, maintainable code structure
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Development](#development)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
 ---
 
-## 🚀 Quick Start
+## Features
+
+### Account Management
+- Sign In with Base: Seamless authentication using Base Account
+- Account Creation: Create new Base Accounts with sub-account support
+- Network Switching: Toggle between Base Sepolia Testnet and Base Mainnet
+- Secure Wallet Integration: EIP-1193 compliant provider integration
+
+### Payment Processing
+- USDC Payments: Send USDC payments on Base network
+- Real-time Status: Live payment status tracking with auto-updates
+- Gasless Transactions: Paymaster integration for sponsored transactions
+- Multi-network Support: Testnet and Mainnet payment processing
+
+### User Experience
+- Modern UI: Built with shadcn/ui and Tailwind CSS
+- Responsive Design: Mobile-first approach with adaptive layouts
+- Dark Theme: Consistent dark theme matching Base branding
+- Loading States: Comprehensive loading and error handling
+- Toast Notifications: User-friendly feedback system
+
+### Developer Experience
+- TypeScript: Full type safety throughout the application
+- Hot Reload: Fast development with Vite
+- ESLint: Code quality and consistency
+- Viem Integration: Ethereum account management and cryptographic operations
+- Modular Architecture: Clean, maintainable code structure
+
+---
+
+## Quick Start
 
 Get up and running in less than 5 minutes!
 
@@ -81,9 +78,62 @@ pnpm dev
 
 Visit `http://localhost:5173` and start exploring Base Account features!
 
+## Project Architecture
+
+```mermaid
+graph TB
+    A[User Interface] --> B[React Application]
+    B --> C[Base Account SDK]
+    C --> D[Base Blockchain]
+    B --> E[Viem Library]
+    E --> F[Ethereum Accounts]
+    B --> G[shadcn/ui Components]
+    B --> H[Tailwind CSS]
+    
+    D --> I[Base Sepolia Testnet]
+    D --> J[Base Mainnet]
+    
+    C --> K[Sub-Accounts]
+    C --> L[Universal Accounts]
+    C --> M[Paymaster Service]
+    
+    N[Wallet Integration] --> C
+    O[Payment Processing] --> C
+    
+    subgraph "Frontend Layer"
+        B
+        G
+        H
+    end
+    
+    subgraph "Blockchain Layer" 
+        D
+        I
+        J
+        K
+        L
+        M
+    end
+    
+    subgraph "Integration Layer"
+        C
+        E
+        N
+        O
+    end
+```
+
+### Architecture Overview
+
+The Base Account Demo follows a layered architecture:
+
+1. **Frontend Layer**: React application with modern UI components
+2. **Integration Layer**: Base Account SDK and Viem for blockchain interactions  
+3. **Blockchain Layer**: Base network with sub-accounts and paymaster services
+
 ---
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -136,7 +186,7 @@ The application will be available at `http://localhost:5173`.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -199,7 +249,7 @@ Viem provides:
 
 ---
 
-## 🎯 Usage
+## Usage
 
 ### Basic Usage
 
@@ -249,7 +299,7 @@ const chainId = isTestnet ? '0x14a34' : '0x2105';
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Project Structure
 
@@ -304,7 +354,7 @@ This project uses:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Running Tests
 
@@ -336,7 +386,7 @@ src/
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Build for Production
 
@@ -388,7 +438,7 @@ Ensure these environment variables are set in your deployment platform:
 
 ---
 
-## 📚 API Reference
+## API Reference
 
 ### Base Account SDK
 
@@ -462,7 +512,7 @@ console.log(account.address); // '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
@@ -491,21 +541,21 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙋 Support
+## Support
 
 ### Getting Help
 
-- 📖 [Documentation](https://docs.base.org)
-- 💬 [Discord Community](https://discord.gg/base)
-- 🐛 [Bug Reports](https://github.com/your-repo/issues)
-- 💡 [Feature Requests](https://github.com/your-repo/issues)
-- 📧 [Email Support](mailto:support@base.org)
+- [Documentation](https://docs.base.org)
+- [Discord Community](https://discord.gg/base)
+- [Bug Reports](https://github.com/your-repo/issues)
+- [Feature Requests](https://github.com/your-repo/issues)
+- [Email Support](mailto:support@base.org)
 
 ### Resources
 
