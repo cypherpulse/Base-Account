@@ -1,6 +1,7 @@
 import { Copy, Check } from "lucide-react";
 import { useState } from "react";
 
+// Props interface for blockchain address display component
 interface AddressDisplayProps {
   address: string;
   label?: string;
