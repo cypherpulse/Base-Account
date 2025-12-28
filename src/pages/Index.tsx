@@ -8,6 +8,8 @@ import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts';
 import BaseLogo from '@/components/BaseLogo';
 import AmountSelector from '@/components/AmountSelector';
 import PaymentStatus from '@/components/PaymentStatus';
+
+// Main page component for Base Account demo application
 import AddressDisplay from '@/components/AddressDisplay';
 import { toast } from 'sonner';
 
